@@ -36,12 +36,23 @@ proceed with the configuration of the environment variables you must configure K
 Before building the container, set the right values to the settings inside `.env` file.
 The settings can be divided in:
 
-   1. **Security variables**
-   2. **Admin Keycloak Credentials**
-   3. **BrainPEP**
-   4. **Database**
-   5. **Gunicorn**
+   1. *Security variables*
+   2. *Admin Keycloak Credentials*
+   3. *BrainPEP*
+   4. *Database*
+   5. *Gunicorn*
    
+### Security Variables
+
+|   Variable	   |            Description	                     |  Default   |                  Example                        |
+|------------------|---------------------------------------------|------------|-------------------------------------------------|
+|   ALGORITHM 	   | Encryption algorithm used for decode JWT    |  "RS256"   |                                                 |
+|   AUDIENCE	   | Audience associated to the JWT  	         |  "client"  |                                                 |
+|   ISSUER	       | Url of who emitted the token  	             |            |  "https://aut-server.it/auth/realms/Brainiot"   |
+| JWS_ALGORITHM    | Encryption algorithm used for decode JWS    |  "RS256"   |                                                 |
+| JWS_PRIVATE_KEY  | Private cryptography key used for sign JWS  |            | "MIIEogIBAAKCAQEArVxYJPkQejSCMdgKuuW/STuk...."  |
+| JWS_PUBLIC_KEY   | Public cryptography key used for decode JWS |            | "MIIEogIBAAKCAQEArVxYJPkQejSCMdgKuuW/STuk...."  |
+| REALM_PUBLIC_KEY | Public cryptography key used for decode JWT |            | "MIIEogIBAAKCAQEArVxYJPkQejSCMdgKuuW/STuk...."  |
 
 
 ## Benchmarks
