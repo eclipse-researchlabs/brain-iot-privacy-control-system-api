@@ -21,14 +21,26 @@ For more information
 2.
    Install [PostgreSql](https://www.postgresql.org/)
    
-clone the repository
+### Clone the repository
 ````
-~$ git clone https://github.com/eclipse-researchlabs/brain-iot-privacy-control-system-api
-
+$ git clone https://github.com/eclipse-researchlabs/brain-iot-privacy-control-system-api
 ````
 
-## Configuration
+### Configuration
+The service assume that you have a Keycloak instance running in a host, so before
+proceed with the configuration of the environment variables you must configure Keycloak
 
+#### File .env
+
+Before building the container, set the right values to the settings inside `.env` file.
+The settings can be divided in:
+
+   1. **Security variables**
+   2. **Admin Keycloak Credentials**
+   3. **BrainPEP**
+   4. **Database**
+   5. **Gunicorn**
+   
 
 
 ## Benchmarks
