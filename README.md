@@ -42,7 +42,7 @@ The settings can be divided in:
    4. *Database*
    5. *Gunicorn*
    
-### Security
+#### Security
 
 |   Variable	   |            Description	                     |  Default   |                  Example                        |
 |------------------|---------------------------------------------|------------|-------------------------------------------------|
@@ -54,7 +54,7 @@ The settings can be divided in:
 | JWS_PUBLIC_KEY   | Public cryptography key used for decode JWS |            | "MIIEogIBAAKCAQEArVxYJPkQejSCMdgKuuW/STuk...."  |
 | REALM_PUBLIC_KEY | Public cryptography key used for decode JWT |            | "MIIEogIBAAKCAQEArVxYJPkQejSCMdgKuuW/STuk...."  |
 
-### Admin Keycloak Credentials
+#### Admin Keycloak Credentials
 
 |   Variable	          |            Description	                                                   |     Example                                                              |
 |-------------------------|----------------------------------------------------------------------------|--------------------------------------------------------------------------|
@@ -64,6 +64,19 @@ The settings can be divided in:
 | ADMIN_PASSWORD          | Password associated to the administrator                                   | "super_secret"                                                           |
 | ADMIN_TOKEN_REQUEST_URL | Url to request a token for the administrator (must be in the master realm) | "http://auth-server.it/auth/realms/master/protocol/openid-connect/token" |
 | ADMIN_USERNAME          | Administrator username                                                     | "brainadmin"                                                             |
+
+#### BrainPEP
+
+|   Variable	             |            Description	                                                  |     Example                                                                        |
+|----------------------------|----------------------------------------------------------------------------|------------------------------------------------------------------------------------|
+| CLIENT_ID                  | Identifier of brainpep client on keycloak                                  |                                                                                    |
+| CLIENT_GRANT_TYPE          | Typology of grant associated to the brainpep                               | "password"                                                                         |
+| CLIENT_SECRET	             | Secret associated to brainpep  (it's an uudv4 given by keycloak)           | "6209377f-589e-439b-8278-ccd2965fb304"                                             |
+| CLIENT_PASSWORD            | Password associated to brainpep                                            | "super_secret"                                                                     |
+| CLIENT_TOKEN_REQUEST_URL   | Url to request a token for brainpep (must be in brainiot realm)            | "http://auth-server.it/auth/realms/Brainiot/protocol/openid-connect/token"         |
+| RESOURCE_REQUEST_URL       | Url to interact with the resources associated to brainpep                  | "http://auth-server.it/auth/realms/Brainiot/authz/protection/resource_set"         |
+| POLICY_REQUEST_URL         | Url to interact with keycloak to store the device policies in uud4 format  | "http://auth-server.it/auth/admin/realms/Brainiot/clients/{CLIENT_SECRET}/roles"   |
+| USER_ATTRIBUTE_REQUEST_URL | Url to set user attributes on keycloak                                     | "http://auth-server.it/auth/admin/realms/Brainiot/users"                           |
 
 ## Benchmarks
 To ensure the reliability of the system it was run a benchmark simulating
