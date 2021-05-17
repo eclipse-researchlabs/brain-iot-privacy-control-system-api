@@ -1,4 +1,5 @@
 # BrainPEP
+[![Build Status](https://travis-ci.com/eclipse-researchlabs/brain-iot-privacy-control-system-api.svg?branch=main)](https://travis-ci.com/eclipse-researchlabs/brain-iot-privacy-control-system-api)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![Python 3.9+](https://img.shields.io/badge/python-3.9-blue.svg)](https://www.python.org/downloads/release)
 
