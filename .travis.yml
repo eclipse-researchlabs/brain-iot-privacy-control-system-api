@@ -1,0 +1,25 @@
+os: linux
+
+addons:
+  apt:
+    packages:
+      - build-essential
+      - python3-dev
+
+cache:
+    pip: true
+
+services: postgresql
+
+language: "python"
+python:
+  - "3.9"
+
+install:
+  - pip install -r dev-requirements.txt
+
+before_script:
+  - psql -c "ALTER USER postgres PASSWORD 'postgres';" -U postgres
+
+script:
+  - pytest --cov=app tests
