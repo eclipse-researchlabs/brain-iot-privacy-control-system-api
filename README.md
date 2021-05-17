@@ -36,13 +36,13 @@ proceed with the configuration of the environment variables you must configure K
 Before building the container, set the right values to the settings inside `.env` file.
 The settings can be divided in:
 
-   1. *Security variables*
+   1. *Security*
    2. *Admin Keycloak Credentials*
    3. *BrainPEP*
    4. *Database*
    5. *Gunicorn*
    
-### Security Variables
+### Security
 
 |   Variable	   |            Description	                     |  Default   |                  Example                        |
 |------------------|---------------------------------------------|------------|-------------------------------------------------|
@@ -54,6 +54,16 @@ The settings can be divided in:
 | JWS_PUBLIC_KEY   | Public cryptography key used for decode JWS |            | "MIIEogIBAAKCAQEArVxYJPkQejSCMdgKuuW/STuk...."  |
 | REALM_PUBLIC_KEY | Public cryptography key used for decode JWT |            | "MIIEogIBAAKCAQEArVxYJPkQejSCMdgKuuW/STuk...."  |
 
+### Admin Keycloak Credentials
+
+|   Variable	          |            Description	                                                   |     Example                                                              |
+|-------------------------|----------------------------------------------------------------------------|--------------------------------------------------------------------------|
+| ADMIN_CLIENT_ID         | Identifier of keycloak administrator                                       |                                                                          |
+| ADMIN_CLIENT_SECRET     | Secret associated to the administrator  	                               | "my super secret"                                                        |
+| ADMIN_GRANT_TYPE	      | Typology of grant associated to the administrator                          | "password"                                                               |
+| ADMIN_PASSWORD          | Password associated to the administrator                                   | "super_secret"                                                           |
+| ADMIN_TOKEN_REQUEST_URL | Url to request a token for the administrator (must be in the master realm) | "http://auth-server.it/auth/realms/master/protocol/openid-connect/token" |
+| ADMIN_USERNAME          | Administrator username                                                     | "brainadmin"                                                             |
 
 ## Benchmarks
 To ensure the reliability of the system it was run a benchmark simulating
