@@ -134,6 +134,17 @@ The settings can be divided in:
 | MAX_WORKERS_NUMBER             | Max number of worker processes                                                                      | 9             |
 | TIMEOUT                        | Time without actions before restart a worker process                                                | "my_password" |
 
+### Build
+```
+~$ cd brain-iot-privacy-control-system-api
+~$ docker build . -t brainiot/brainpep:1.0.0 
+```
+
+### Run
+```
+~$ docker run -d --net my_network --ip brain_pep_ip --name brainpep brainiot/brainpep:1.0.0
+```
+
 ## Benchmarks
 To ensure the reliability of the system it was run a benchmark simulating
 100 gateways sending packets in cascade for 20 seconds in the production environment, and it was
