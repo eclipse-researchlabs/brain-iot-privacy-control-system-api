@@ -44,21 +44,21 @@ The settings can be divided in:
    
 #### Security
 
-|   Variable	   |            Description	                     |  Default   |                  Example                        |
-|------------------|---------------------------------------------|------------|-------------------------------------------------|
-|   ALGORITHM 	   | Encryption algorithm used for decode JWT    |  "RS256"   |                                                 |
-|   AUDIENCE	   | Audience associated to the JWT  	         |  "client"  |                                                 |
-|   ISSUER	       | Url of who emitted the token  	             |            |  "https://aut-server.it/auth/realms/Brainiot"   |
-| JWS_ALGORITHM    | Encryption algorithm used for decode JWS    |  "RS256"   |                                                 |
-| JWS_PRIVATE_KEY  | Private cryptography key used for sign JWS  |            | "MIIEogIBAAKCAQEArVxYJPkQejSCMdgKuuW/STuk...."  |
-| JWS_PUBLIC_KEY   | Public cryptography key used for decode JWS |            | "MIIEogIBAAKCAQEArVxYJPkQejSCMdgKuuW/STuk...."  |
-| REALM_PUBLIC_KEY | Public cryptography key used for decode JWT |            | "MIIEogIBAAKCAQEArVxYJPkQejSCMdgKuuW/STuk...."  |
+|   Variable	   |            Description	                     |   Example                        |
+|------------------|---------------------------------------------|------------------------------------------------|
+|   ALGORITHM 	   | Encryption algorithm used for decode JWT    | "RS256"                                        |
+|   AUDIENCE	   | Audience associated to the JWT  	         | "client"                                       |
+|   ISSUER	       | Url of who emitted the token  	             | "https://aut-server.it/auth/realms/Brainiot"   |
+| JWS_ALGORITHM    | Encryption algorithm used for decode JWS    | "RS256"                                        |
+| JWS_PRIVATE_KEY  | Private cryptography key used for sign JWS  | "MIIEogIBAAKCAQEArVxYJPkQejSCMdgKuuW/STuk...." |
+| JWS_PUBLIC_KEY   | Public cryptography key used for decode JWS | "MIIEogIBAAKCAQEArVxYJPkQejSCMdgKuuW/STuk...." |
+| REALM_PUBLIC_KEY | Public cryptography key used for decode JWT | "MIIEogIBAAKCAQEArVxYJPkQejSCMdgKuuW/STuk...." |
 
 #### Admin Keycloak Credentials
 
 |   Variable	          |            Description	                                                   |     Example                                                              |
 |-------------------------|----------------------------------------------------------------------------|--------------------------------------------------------------------------|
-| ADMIN_CLIENT_ID         | Identifier of keycloak administrator                                       |                                                                          |
+| ADMIN_CLIENT_ID         | Identifier of keycloak administrator                                       | "My identifier"                                                          |
 | ADMIN_CLIENT_SECRET     | Secret associated to the administrator  	                               | "my super secret"                                                        |
 | ADMIN_GRANT_TYPE	      | Typology of grant associated to the administrator                          | "password"                                                               |
 | ADMIN_PASSWORD          | Password associated to the administrator                                   | "super_secret"                                                           |
@@ -69,7 +69,7 @@ The settings can be divided in:
 
 |   Variable	             |            Description	                                                  |     Example                                                                        |
 |----------------------------|----------------------------------------------------------------------------|------------------------------------------------------------------------------------|
-| CLIENT_ID                  | Identifier of brainpep client on keycloak                                  |                                                                                    |
+| CLIENT_ID                  | Identifier of brainpep client on keycloak                                  | "My identifier"                                                                    |
 | CLIENT_GRANT_TYPE          | Typology of grant associated to the brainpep                               | "password"                                                                         |
 | CLIENT_SECRET	             | Secret associated to brainpep  (it's an uudv4 given by keycloak)           | "6209377f-589e-439b-8278-ccd2965fb304"                                             |
 | CLIENT_PASSWORD            | Password associated to brainpep                                            | "super_secret"                                                                     |
