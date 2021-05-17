@@ -1,0 +1,24 @@
+"""
+
+:author: Angelo Cutaia
+*******************************************************************************
+* Copyright (C) 2021 LINKS Foundation
+*
+* This program and the accompanying materials are made
+* available under the terms of the Eclipse Public License 2.0
+* which is available at https://www.eclipse.org/legal/epl-2.0/
+*
+* SPDX-License-Identifier: EPL-2.0
+ ******************************************************************************
+"""
+
+# Internal
+from app.internals.logger import get_logger
+
+# ---------------------------------------------------------------------------
+
+
+def disable_logger():
+    """Disable the logger of the application"""
+    logger = get_logger()
+    logger.disabled = True
