@@ -122,6 +122,18 @@ The settings can be divided in:
 | POSTGRES_PWD      | Database password                  | "my_password" |
 | POSTGRES_USER     | User Associated to the database    | "postgres"    |
 
+#### [Gunicorn](https://gunicorn.org)
+
+|   Variable	                 |            Description	                                                                           |   Example     |
+|--------------------------------|-----------------------------------------------------------------------------------------------------|---------------|
+| LOG_LEVEL                      | Logging level                                                                                       |  "WARNING"    |
+| CORES_NUMBER                   | Host cores number                                                                                   | 8             |
+| KEEP_ALIVE                     | Max seconds for receive keep alive                                                                  | 5432          |
+| SERVER_PORT                    | Port exposed by the server                                                                          | 8000          |
+| DATABASE_MAX_CONNECTION_NUMBER | Max connections handled by the system (100 by default for postgres) (15 are reserved for the admin) | "postgres"    |
+| MAX_WORKERS_NUMBER             | Max number of worker processes                                                                      | 9             |
+| TIMEOUT                        | Time without actions before restart a worker process                                                | "my_password" |
+
 ## Benchmarks
 To ensure the reliability of the system it was run a benchmark simulating
 100 gateways sending packets in cascade for 20 seconds in the production environment, and it was
@@ -130,6 +142,3 @@ calculated the latency of the responses and if every response was successful.
 For more information and stats **click** the image below
 
 [![image](static/benchmark.png)](https://ipt-services.polito.it/brainpep/static/benchmark.html)
-
-
-## Release Notes
