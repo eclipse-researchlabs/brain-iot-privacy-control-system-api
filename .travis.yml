@@ -23,6 +23,3 @@ before_script:
 
 script:
   - pytest --cov=app tests
-
-after_success:
-  - codecov
