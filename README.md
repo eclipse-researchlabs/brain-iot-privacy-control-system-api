@@ -8,7 +8,8 @@
 ## Overview
 BrainPEP is a back-end that offers RESTful API that follows [OpenAPI Specification](https://swagger.io/specification/).
 Its scope is to manage the resources associated to Services and Devices interacting with an Identity and Access Manager i.e. [Keycloak](https://www.keycloak.org/).
-For more information 
+
+For more information click the image below
 
 [![image](static/api_logo.png)](https://ipt-services.polito.it/brainpep/docs)
 
@@ -44,6 +45,13 @@ The settings can be divided in:
 
 
 ## Benchmarks
+To ensure the reliability of the system it was run a benchmark simulating
+100 gateways sending packets in cascade for 20 seconds in the production environment, and it was
+calculated the latency of the responses and if every response was successful.
+
+For more information and stats click the image below
+
+[![image](static/benchmark.png)](https://ipt-services.polito.it/brainpep/static/benchmark.html)
 
 
 ## Release Notes
