@@ -112,6 +112,16 @@ The settings can be divided in:
 | POLICY_REQUEST_URL         | Url to interact with keycloak to store the device policies in uud4 format  | "http://auth-server.it/auth/admin/realms/Brainiot/clients/{CLIENT_SECRET}/roles"   |
 | USER_ATTRIBUTE_REQUEST_URL | Url to set user attributes on keycloak                                     | "http://auth-server.it/auth/admin/realms/Brainiot/users"                           |
 
+#### Database
+
+|   Variable	    |            Description	         |   Example     |
+|-------------------|------------------------------------|---------------|
+| CONNECTION_NUMBER | Number  of connection instantiated | 20            |
+| POSTGRES_DB       | Database name                      | "brain_data"  |
+| POSTGRES_PORT     | Port to use                        | 5432          |
+| POSTGRES_PWD      | Database password                  | "my_password" |
+| POSTGRES_USER     | User Associated to the database    | "postgres"    |
+
 ## Benchmarks
 To ensure the reliability of the system it was run a benchmark simulating
 100 gateways sending packets in cascade for 20 seconds in the production environment, and it was
