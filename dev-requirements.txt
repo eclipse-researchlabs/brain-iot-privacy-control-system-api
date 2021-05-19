@@ -5,7 +5,7 @@ httpx>=0.18.1
 python-jose[cryptography]
 gunicorn>=20.1.0
 aiologger>=0.6.0
-asyncpg >= 0.22.0
+asyncpg >= 0.23.0
 
 # Testing requirements
 respx>= 0.17.0
